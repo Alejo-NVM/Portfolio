@@ -13,6 +13,64 @@
   }
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: aparecer 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+.pantalla-espera {
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  padding: 2rem;
+}
+
+.advertencia-titulo {
+  color: #ff1e1e;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff1e1e;
+  animation: parpadeo 1s infinite alternate;
+  margin-bottom: 2rem;
+}
+
+.advertencia-texto {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #dddddd;
+}
+
+.advertencia-final {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ff9900;
+  text-shadow: 0 0 5px #ff9900;
+}
+
+@keyframes parpadeo {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -44,7 +102,7 @@
 }
 
 body {
-  background-image: url("C:\Users\AMartinez\Desktop\Leibnitz\Programacion\Portfolio\portfolio\public\fondo.jpg");
+  background-image: url("/public/fondo.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,6 +114,21 @@ body {
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+.texto-con-contorno1 {
+  color: white;
+  font-size: 1.8em; /* Aumentar el tamaño de la fuente */
+  font-style: italic; /* Hacerla cursiva para un estilo de cita */
+  line-height: 1.6; /* Mejorar la legibilidad */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, /* Contorno del texto */ 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombras suaves para un efecto de profundidad */
+  max-width: 80%; /* Limitar el ancho de la cita */
+  text-align: justify;
+}
+
+.padding-negativo {
+  transform: translateX(-130px);
 }
 
 .boton-animado button {
